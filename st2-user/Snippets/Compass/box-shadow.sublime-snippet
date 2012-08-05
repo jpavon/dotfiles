@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+@include box-shadow(${1:inset} ${2:x} ${3:y} ${4:blur} ${5:spread} ${6:color});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sbox-shadow</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.scss</scope>
+</snippet>
+

@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+@include skew(${1:10}deg, ${2:10}deg);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sskew</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.scss</scope>
+</snippet>
+

@@ -1,0 +1,10 @@
+{
+	"sublimelinter": "save-only",
+
+	"sublimelinter_popup_errors_on_save": true,
+
+	"sublimelinter_disable":
+	[
+		"css"
+	]
+}

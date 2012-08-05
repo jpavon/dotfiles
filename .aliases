@@ -1,0 +1,27 @@
+# Easier navigation: .., ..., ...., .....
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# Shortcuts
+alias desk="cd ~/Desktop/"
+alias g="git"
+alias o="open"
+alias oo="open ."
+alias cw="compass watch"
+alias s="subl ."
+
+# List all files colorized in long format
+alias l="ls -Gl"
+
+# List all files colorized in long format, including dot files
+alias la="ls -Gla"
+
+# List only directories
+alias ld='ls -l | grep "^d"'
+
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"

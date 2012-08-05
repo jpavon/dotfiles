@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+@include transition(${1:all/color/width} ${2:duration/0.3s} ${3:ease/linear/ease-in/ease-in-out} ${4:delay/0s});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>stransition</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.scss</scope>
+</snippet>
+
