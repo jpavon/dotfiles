@@ -5,6 +5,7 @@ unset file
 
 export PATH=$PATH:$HOME/bin
 export PATH=/usr/local/bin:$PATH
+# export NODE_PATH="/usr/local/lib/node_modules"
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
@@ -78,5 +79,50 @@ function server() {
 	# Set the default Content-Type to `text/plain` instead of `application/octet-stream`
 	# And serve everything as UTF-8 (although not technically correct, this doesn’t break anything for binary files)
 	python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
+}
+
+# Start a PHP server from a directory, optionally specifying the port
+# (Requires PHP 5.4.0+.)
+function phpserver() {
+	local port="${1:-4000}"
+	local ip=$(ipconfig getifaddr en1)
+	sleep 1 && open "http://${ip}:${port}/" &
+	php -S "${ip}:${port}"
+}
+
+function gh() {
+	echo "co   = checkout"
+	echo "ci   = commit"
+	echo "st   = status"
+	echo "b   = branch"
+	echo "hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
+	echo "################################################################################"
+	echo "l = log --pretty=oneline -n 20 --graph"
+	echo "type = cat-file -t"
+	echo "dump = cat-file -p"
+	echo "################################################################################"
+	echo "# View the current working tree status using the short format"
+	echo "s = status -s"
+	echo "################################################################################"
+	echo "# Diff"
+	echo "d = diff --patch-with-stat"
+	echo "################################################################################"
+	echo "# Pull in remote changes for the current repository and all its submodules"
+	echo "p = !git pull; git submodule foreach git pull origin master"
+	echo "################################################################################"
+	echo "# Clone a repository including all submodules"
+	echo "c = clone --recursive"
+	echo "################################################################################"
+	echo "# Commit all changes"
+	echo "cam = !git add -A && git commit -am"
+	echo "################################################################################"
+	echo "# Switch to a branch, creating it if necessary"
+	echo "go = checkout -B"
+	echo "################################################################################"
+	echo "# Undo a git push"
+	echo "undopush = push -f origin HEAD^:master"
+	echo "################################################################################"
+	echo "# Git Reset Commit"
+	echo "rst = reset --soft HEAD~1 "
 }
 
