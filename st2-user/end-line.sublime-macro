@@ -1,0 +1,9 @@
+[
+	{
+		"args":
+		{
+			"to": "eol"
+		},
+		"command": "move_to"
+	}
+]
