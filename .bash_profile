@@ -3,8 +3,8 @@ for file in ~/.{bashrc,zshrc,aliases,bash_prompt}; do
 done
 unset file
 
-export PATH=$PATH:$HOME/bin
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$HOME/bin:$PATH
+# export PATH=/usr/local/bin:$PATH
 # export NODE_PATH="/usr/local/lib/node_modules"
 
 # Case-insensitive globbing (used in pathname expansion)
