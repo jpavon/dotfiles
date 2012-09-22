@@ -32,5 +32,5 @@ alias ld='ls -l | grep "^d"'
 
 
 # Show/hide hidden files in Finder
-alias show="defaults write com.apple.Finder AppleShowAllFiles TRUE && killall Finder"
-alias hide="defaults write com.apple.Finder AppleShowAllFiles FALSE && killall Finder"
+alias show="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
