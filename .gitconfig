@@ -43,12 +43,14 @@
 	undopush = push -f origin HEAD^:master
 
 	# Git Reset Commit
-	rst = reset --soft HEAD~1 
+	rst = reset --soft HEAD~1
+	rsth = reset --hard HEAD~1
+
 
 [apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
-	
+
 [format]
 	pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 
