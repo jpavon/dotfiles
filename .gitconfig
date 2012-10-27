@@ -15,7 +15,9 @@
 	ci   = commit
 	st   = status
 	b   = branch
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	hist = git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
+	hist2 = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 
 	l = log --pretty=oneline -n 20 --graph
 	type = cat-file -t
