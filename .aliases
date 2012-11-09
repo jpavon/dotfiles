@@ -19,7 +19,9 @@ alias ys="yeoman server"
 alias yb="yeoman build"
 alias yqs="yeoman init quickstart"
 
+# Jekyll
 
+alias js="jekyll --server & open http://localhost:4000"
 
 # List all files colorized in long format
 alias l="ls -Gl"
