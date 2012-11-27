@@ -3,7 +3,7 @@ for file in ~/.{bashrc,zshrc,aliases,bash_prompt}; do
 done
 unset file
 
-export PATH=/usr/local/bin:$HOME/bin:/usr/local/Cellar/ruby/1.9.3-p327/bin:~/.rvm/bin:$PATH
+export PATH=/usr/local/bin:$HOME/bin:~/.rvm/bin:$PATH
 # export PATH=/usr/local/bin:$PATH
 # export NODE_PATH="/usr/local/lib/node_modules"
 
