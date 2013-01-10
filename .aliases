@@ -21,7 +21,7 @@ alias yqs="yeoman init quickstart"
 
 # Jekyll
 
-alias js="jekyll --server"
+alias js="jekyll --server --auto"
 alias jso="open http://localhost:4000"
 
 # Update dotfiles
