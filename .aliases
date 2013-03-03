@@ -24,6 +24,11 @@ alias yqs="yeoman init quickstart"
 alias js="jekyll --server --auto"
 alias jso="open http://localhost:4000"
 
+# Styledocco
+
+alias sdcompass="styledocco --preprocessor \"sass --compass\""
+
+
 # Update dotfiles
 alias udot="./bootstrap.sh"
 
