@@ -59,6 +59,9 @@
 	# Merge branches, keeping historical existence of the merged branch
 	m = merge --no-ff
 
+	# Discard unstaged changes
+	ss = stash save --keep-index
+	sd = stash drop
 
 [apply]
 	# Detect whitespace errors when applying a patch
