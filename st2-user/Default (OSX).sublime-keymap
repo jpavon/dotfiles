@@ -1,9 +1,0 @@
-[
-	{ "keys": ["super+b"], "command": "toggle_side_bar" },
-	{ "keys": ["super+v"], "command": "paste_and_indent" },
-	{ "keys": ["super+shift+v"], "command": "paste" },
-
-	{ "keys": ["super+r"], "command": "refresh_folder_list" },
-
-	{ "keys": ["super+ñ"], "command": "run_macro_file", "args": {"file": "Packages/User/end-line.sublime-macro"} }
-]
