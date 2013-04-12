@@ -16,6 +16,7 @@
 .DS_Store
 ._*
 Thumbs.db
+*.cache
 .cache
 .project
 .settings
