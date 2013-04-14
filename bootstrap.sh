@@ -1,6 +1,3 @@
-# chmod +x bootstrap.sh
-
-#!/bin/bash
 cd "$(dirname "$0")"
 
 function doIt() {
