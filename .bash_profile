@@ -1,11 +1,11 @@
+export PATH="/usr/local/bin:$HOME/bin:$(brew --prefix ruby)/bin:$PATH"
+# export PATH=/usr/local/bin:$PATH
+# export NODE_PATH="/usr/local/lib/node_modules"
+
 for file in ~/.{bashrc,zshrc,aliases,bash_prompt}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
-
-export PATH="/usr/local/bin:$HOME/bin:$(brew --prefix ruby)/bin:$PATH"
-# export PATH=/usr/local/bin:$PATH
-# export NODE_PATH="/usr/local/lib/node_modules"
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
