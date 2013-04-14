@@ -55,4 +55,4 @@ build/config/buildinfo.properties
 #Grunt
 node_modules/
 
-.last-run
+*.last-run
