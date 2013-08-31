@@ -5,7 +5,7 @@
 	helper = osxkeychain
 [core]
 	editor = subl -n -w
-	autocrlf = true
+	autocrlf = false
 	safecrlf = false
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes

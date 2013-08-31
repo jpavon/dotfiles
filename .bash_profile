@@ -1,4 +1,8 @@
 export PATH="/usr/local/bin:$HOME/bin:$(brew --prefix ruby)/bin:$PATH"
+
+export PATH="/Users/julio/Downloads/adt-bundle-mac-x86_64-20130717/sdk/android-tools:$PATH"
+export PATH="/Users/julio/Downloads/adt-bundle-mac-x86_64-20130717/sdk/tools:$PATH"
+
 # export PATH=/usr/local/bin:$PATH
 # export NODE_PATH="/usr/local/lib/node_modules"
 
@@ -66,6 +70,11 @@ fi
 #
 # Functions
 #
+
+# cd into whatever is the forefront Finder window.
+cdf() {  # short for cdfinder
+  cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
+}
 
 # Create a new directory and enter it
 function md() {
