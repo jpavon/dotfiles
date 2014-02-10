@@ -7,4 +7,4 @@ function doIt() {
 doIt
 
 unset doIt
-source ~/.zshrc
+# source ~/.zshrc
