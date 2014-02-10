@@ -50,11 +50,7 @@ elif [[ "$USER" == "root" ]]; then
 fi
 
 is_git_repo() {
-    $(git rev-parse --is-inside-work-tree &> /dev/null)
-}
-
-is_git_dir() {
-    $(git rev-parse --is-inside-git-dir 2> /dev/null)
+    git rev-parse --is-inside-work-tree &> /dev/null
 }
 
 get_git_branch() {
@@ -67,26 +63,26 @@ get_git_branch() {
     # Otherwise, just give up
     branch_name="(unknown)"
 
-    printf $branch_name
+    echo $branch_name
 }
 
 # Git status information
-prompt_git() {
+function prompt_git() {
     local git_info git_state uc us ut st
 
-    if ! is_git_repo || is_git_dir; then
+    if ! is_git_repo; then
         return 1
     fi
 
     git_info=$(get_git_branch)
 
     # Check for uncommitted changes in the index
-    if ! $(git diff --quiet --ignore-submodules --cached); then
+    if ! `git diff --quiet --ignore-submodules --cached`; then
         uc="+"
     fi
 
     # Check for unstaged changes
-    if ! $(git diff-files --quiet --ignore-submodules --); then
+    if ! `git diff-files --quiet --ignore-submodules --`; then
         us="!"
     fi
 
@@ -96,7 +92,7 @@ prompt_git() {
     fi
 
     # Check for stashed files
-    if $(git rev-parse --verify refs/stash &>/dev/null); then
+    if `git rev-parse --verify refs/stash &>/dev/null`; then
         st="$"
     fi
 
@@ -107,14 +103,11 @@ prompt_git() {
         git_info="$git_info[$git_state]"
     fi
 
-    printf "${SOLAR_WHITE} on ${style_branch}${git_info}"
+    echo -ne "${SOLAR_WHITE} on ${style_branch}${git_info}"
 }
 
-
-# Set the terminal title to the current working directory
-PS1="\[\033]0;\w\007\]"
 # Build the prompt
-PS1+="\n" # Newline
+PS1="\n" # Newline
 PS1+="${style_user}\u" # Username
 PS1+="${style_chars}@" # @
 PS1+="${style_host}\h" # Host

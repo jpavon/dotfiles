@@ -1,8 +1,8 @@
 [user]
-	name = Julio Pavon
-	email = julio@jpavon.com
+	name = Julio Pavón
+	email = julio@thisisbeyond.co.uk
 [credential]
-	helper = osxkeychain
+	helper = cache --timeout=3600
 [core]
 	editor = subl -n -w
 	autocrlf = false
@@ -48,20 +48,15 @@
 	rs = reset --soft HEAD~1
 	rh = reset --hard HEAD~1
 
-	# Show verbose output about tags, branches or remotes
-	tags = tag -l
-	branches = branch -a
-	remotes = remote -v
-
-	# Pushes to master
-	pom = push origin master
-
 	# Merge branches, keeping historical existence of the merged branch
 	m = merge --no-ff
 
-	# Discard unstaged changes
-	ss = stash save --keep-index
-	sd = stash drop
+	# Push to origin
+	pom = push origin master
+
+	# Push to beanstalk
+	pbm = push beanstalk master
+
 
 [apply]
 	# Detect whitespace errors when applying a patch
@@ -89,11 +84,9 @@
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	conflictstyle = diff3
 
 # Use `origin` as the default remote on the `master` branch in all cases
 [branch "master"]
 	remote = origin
 	merge = refs/heads/master
-
-[push]
-	default = simple

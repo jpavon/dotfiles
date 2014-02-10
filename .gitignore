@@ -56,3 +56,4 @@ build/config/buildinfo.properties
 node_modules/
 
 *.last-run
+*.afpDeleted*
