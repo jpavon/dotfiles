@@ -1,6 +1,6 @@
 # Dotfiles
 
-## Usage:
+## Usage
 
 #### Clone this repo:
 
@@ -26,3 +26,14 @@ Once is synced you can use this commands:
 dot # sync dotfiles
 godot # go to ~/.dotfiles folder
 ```
+
+## `.extra` file
+
+Add an `.extra` file to `~/` with your git credentials.
+
+```bash
+git config --global user.name "Your name"
+git config --global user.email "Your email"
+```
+
+Credits to [https://github.com/mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)

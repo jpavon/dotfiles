@@ -1,6 +1,3 @@
-[user]
-	name = Julio Pavón
-	email = julio@thisisbeyond.co.uk
 [credential]
 	helper = cache --timeout=3600
 [core]
