@@ -11,15 +11,12 @@
 	attributesfile = ~/.gitattributes
 
 [alias]
-	co   = checkout
-	ci   = commit
-	st   = status
-	b   = branch
+	# Commit history w pretty format
 	hist = log --graph --pretty=format:'%Cred%h%Creset [%an]: %s %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 
-	hist2 = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	# View abbreviated SHA, description, and history graph of the latest 20 commits
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
-	l = log --pretty=oneline -n 20 --graph
 	type = cat-file -t
 	dump = cat-file -p
 
@@ -31,6 +28,11 @@
 
 	# Pull in remote changes for the current repository and all its submodules
 	p = !"git pull; git submodule foreach git pull origin master"
+
+	# Show verbose output about tags, branches or remotes
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
 
 	# Clone a repository including all submodules
 	c = clone --recursive
@@ -66,7 +68,8 @@
 	pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 
 [color]
-	# Use colors in Git commands that are capable of colored output when outputting to the terminal
+	# Use colors in Git commands that are capable of colored output when
+	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
 	ui = auto
 [color "branch"]
 	current = yellow reverse
@@ -81,6 +84,7 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
