@@ -24,7 +24,10 @@
 	s = status -s
 
 	# Diff
-	d = diff --patch-with-stat
+	# d = diff --patch-with-stat
+
+	# Show the diff between the latest commit and the current state
+	d = !"git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat"
 
 	# Pull in remote changes for the current repository and all its submodules
 	p = !"git pull; git submodule foreach git pull origin master"

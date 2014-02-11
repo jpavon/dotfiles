@@ -7,4 +7,6 @@ function doIt() {
 doIt
 
 unset doIt
-# source ~/.zshrc
+
+# Reload shell
+exec $SHELL -l
