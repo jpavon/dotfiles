@@ -25,7 +25,7 @@ alias js="jekyll --server"
 alias jso="open http://localhost:4000"
 
 # Update dotfiles
-alias dot="./bootstrap.sh"
+alias dot="~/.dotfiles/sync.sh"
 
 # List all files colorized in long format
 alias l="ls -Gl"

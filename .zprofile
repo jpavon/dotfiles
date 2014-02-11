@@ -1,4 +1,4 @@
 for file in ~/.{bash_profile,bashrc,zshrc,aliases}; do
-	[ -r "$file" ] && source "$file"
+	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
