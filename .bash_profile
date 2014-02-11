@@ -1,23 +1,19 @@
-export PATH=/usr/local/bin:/usr/local/git/bin:/usr/bin/subl:/usr/local/bin/phantomjs:/Users/julio/Documents/rsync-backups:$PATH
-export PATH="$(brew --prefix php55)/bin:$PATH"
-# export PATH=/usr/local/bin:$PATH
-# export NODE_PATH="/usr/local/lib/node_modules"
+export PATH="/usr/local/git/bin:$PATH"
 
+export PATH="/usr/local/bin:$PATH"
+
+export PATH="$HOME/bin:$PATH"
+
+export PATH="$(brew --prefix php55)/bin:$PATH"
+
+export PATH="vendor/bin:$PATH"
 
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
 # Make Sublime the default editor
-# export EDITOR="s"
-
-# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
-
-# If possible, add tab completion for many more commands
-[ -f /etc/bash_completion ] && source /etc/bash_completion
-
-
+export EDITOR="subl"
 
 
 #
