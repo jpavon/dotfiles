@@ -8,5 +8,8 @@ doIt
 
 unset doIt
 
+# Go back to previous directory
+cd -
+
 # Reload shell
 exec $SHELL -l
