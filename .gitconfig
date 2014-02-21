@@ -38,6 +38,9 @@
 	# Commit all changes
 	cam = !git add -A && git commit -am
 
+	# Remove file from the current index
+	unstage = reset HEAD --
+
 	# Switch to a branch, creating it if necessary
 	go = checkout -B
 
