@@ -11,5 +11,9 @@ unset doIt
 # Go back to previous directory
 cd -
 
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+echo "  Sync done."
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+
 # Reload shell
 exec $SHELL -l
