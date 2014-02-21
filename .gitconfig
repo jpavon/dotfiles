@@ -1,5 +1,6 @@
 [credential]
 	helper = cache --timeout=3600
+
 [core]
 	editor = subl -n -w
 	autocrlf = false
@@ -19,9 +20,6 @@
 
 	# View the current working tree status using the short format
 	s = status -s
-
-	# Diff
-	# d = diff --patch-with-stat
 
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat"
@@ -59,7 +57,6 @@
 	# Push to beanstalk
 	pbm = push beanstalk master
 
-
 [apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
@@ -71,6 +68,7 @@
 	# Use colors in Git commands that are capable of colored output when
 	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
 	ui = auto
+
 [color "branch"]
 	current = yellow reverse
 	local = yellow
@@ -90,7 +88,7 @@
 	log = true
 	conflictstyle = diff3
 
-# Use `origin` as the default remote on the `master` branch in all cases
 [branch "master"]
+	# Use `origin` as the default remote on the `master` branch in all cases
 	remote = origin
 	merge = refs/heads/master
