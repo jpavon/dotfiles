@@ -4,11 +4,6 @@
 # General UI/UX                                                               #
 ###############################################################################
 
-# Set computer name (as done via System Preferences → Sharing)
-scutil --set ComputerName "Julio Air"
-scutil --set HostName "Julio Air"
-scutil --set LocalHostName "Julio-Air"
-
 # Menu bar: disable transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
