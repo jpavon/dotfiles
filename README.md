@@ -46,4 +46,7 @@ GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 ```
 
-Credits to [https://github.com/mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
+Credits to:
+
+- [https://github.com/mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
+- [https://github.com/necolas/dotfiles](https://github.com/necolas/dotfiles)
