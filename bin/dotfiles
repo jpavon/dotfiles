@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+
+
+# Help
+run_help() {
+
+cat <<EOT
+
+    dotfiles
+
+    Options:
+        help, -h        Show this message.
+        update, -u      Update ~/ with new changes from ~/.dotfiles/
+        go, -g          Change directory to ~/.dotfiles
+
+EOT
+
+}
+
+if [[ "$1" == "-h" || "$1" == "help" ]]; then
+    run_help
+    exit
+fi
+
+
+
+
+
+
+
+
+# Update dotfiles
+run_update() {
+
+cd ~/.dotfiles
+
+function doIt() {
+    rsync --exclude ".git/" --exclude ".DS_Store" --exclude "sync.sh" --exclude ".osx" --exclude "README.md" -av . ~
+}
+doIt
+unset doIt
+
+# Go back to previous directory
+cd -
+
+# Success logging
+e_success() {
+    printf "$(tput setaf 10)✓ %s$(tput sgr0)\n" "$@"
+}
+e_success 'Sync done.'
+
+
+# Reload shell
+exec $SHELL -l
+
+}
+
+if [[ "$1" == "" || "$1" == "-u" || "$1" == "update" ]]; then
+    run_update
+    exit
+fi
+
+
+
+
+
+
+
+
+# Goto folder
+run_go() {
+
+cd ~/.dotfiles
+
+}
+
+if [[ "$1" == "-g" || "$1" == "go" ]]; then
+    run_go
+    exit
+fi
