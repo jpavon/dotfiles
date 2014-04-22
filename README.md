@@ -24,11 +24,10 @@ cd ~/.dotfiles && chmod +x sync.sh
 ./sync.sh
 ```
 
-Once is synced you can use this commands:
+Once is synced you can use this command to update the dotfiles from ~/.dotfiles to ~/:
 
 ```bash
-dot # sync dotfiles
-godot # go to ~/.dotfiles folder
+dotfiles
 ```
 
 ## `.extra` file

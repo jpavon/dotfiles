@@ -60,6 +60,9 @@
 	# Push to beanstalk
 	pbm = push beanstalk master
 
+	# Remove changes from a file
+	rfile = checkout HEAD --
+
 [apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix

@@ -3,6 +3,8 @@ for file in ~/.{functions,zshrc,aliases,extra}; do
 done
 unset file
 
+export PATH=$(brew --prefix ruby)/bin:$PATH
+
 export PATH="/usr/local/bin:$PATH"
 
 export PATH="$HOME/bin:$PATH"
