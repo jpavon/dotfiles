@@ -12,7 +12,7 @@
 git clone https://github.com/jpavon/dotfiles.git ~/.dotfiles
 ```
 
-#### Make sync.sh executable:
+#### Make dotfiles executable:
 
 ```bash
 cd ~/.dotfiles && chmod +x bin/dotfiles
