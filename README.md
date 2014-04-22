@@ -15,13 +15,13 @@ git clone https://github.com/jpavon/dotfiles.git ~/.dotfiles
 #### Make sync.sh executable:
 
 ```bash
-cd ~/.dotfiles && chmod +x sync.sh
+cd ~/.dotfiles && chmod +x bin/dotfiles
 ```
 
 #### Sync files:
 
 ```bash
-./sync.sh
+./bin/dotfiles
 ```
 
 Once is synced you can use this command to update the dotfiles from ~/.dotfiles to ~/:
