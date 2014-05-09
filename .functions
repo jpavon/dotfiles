@@ -20,14 +20,12 @@ function server() {
 # Start a PHP server from a directory, optionally specifying the port
 # (Requires PHP 5.4.0+.)
 function phpserver() {
-	local port="${1:-4000}"
-	local ip=$(ipconfig getifaddr en1)
-	sleep 1 && open "http://${ip}:${port}/" &
-	php -S "${ip}:${port}"
+	open http://localhost:8000 &
+	php -S localhost:8000
 }
 
 # Create a data URI from a file and copy it to the pasteboard
-datauri() {
+function datauri() {
     local mimeType=$(file -b --mime-type "$1")
     if [[ $mimeType == text/* ]]; then
         mimeType="${mimeType};charset=utf-8"
