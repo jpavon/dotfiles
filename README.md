@@ -1,10 +1,8 @@
 # Dotfiles
 
+Note: You need to have [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) installed.
+
 ## Usage
-
-#### Install Oh-my-zsh:
-
-[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 #### Clone this repo:
 
