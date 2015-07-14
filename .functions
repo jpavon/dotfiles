@@ -20,10 +20,8 @@ function server() {
 # Start a PHP server from a directory, optionally specifying the port
 # (Requires PHP 5.4.0+.)
 function phpserver() {
-	local port="${1:-4000}"
-	local ip=$(ipconfig getifaddr en1)
-	sleep 1 && open "http://${ip}:${port}/" &
-	php -S "${ip}:${port}"
+	open http://localhost:8000 &
+	php -S localhost:8000
 }
 
 # Create a data URI from a file and copy it to the pasteboard
@@ -63,4 +61,14 @@ function o() {
 	else
 		open "$@"
 	fi
+}
+
+# backup website files
+function backup() {
+	# onegian
+	rsync -av --exclude "node_modules" --exclude "vendor" /Users/julio/Desktop/onegian.com /Users/julio/Dropbox/_backups-rsync
+	# solairu
+	rsync -av --exclude "node_modules" --exclude "vendor" /Users/julio/Desktop/solairu.com /Users/julio/Dropbox/_backups-rsync
+	# digitalocean sites
+	rsync -av --exclude "node_modules" --exclude "vendor" /Users/julio/Projects/DigitaloceanSites /Users/julio/Dropbox/_backups-rsync
 }
