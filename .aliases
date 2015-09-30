@@ -56,3 +56,5 @@ alias mysqlstop="mysql.server stop"
 alias reload="exec $SHELL -l"
 
 alias startampps="sudo /Applications/AMPPS/apache/bin/httpd -k start"
+
+alias go="git-open"
