@@ -10,23 +10,6 @@ alias desk="cd ~/Desktop/"
 # Git
 alias g="git"
 
-#Compass
-alias cw="compass watch"
-
-# Yeoman
-alias y="yeoman"
-alias ys="yeoman server"
-alias yb="yeoman build"
-alias yqs="yeoman init quickstart"
-
-# Jekyll
-alias js="jekyll --server"
-alias jso="open http://localhost:4000"
-
-# Update dotfiles / go to folder
-alias dot="~/.dotfiles/sync.sh"
-alias godot="cd ~/.dotfiles"
-
 # List all files colorized in long format
 alias l="ls -Gl"
 
@@ -55,6 +38,5 @@ alias mysqlstop="mysql.server stop"
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
-alias startampps="sudo /Applications/AMPPS/apache/bin/httpd -k start"
-
+# Git open
 alias go="git open"

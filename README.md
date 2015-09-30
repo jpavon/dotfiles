@@ -1,10 +1,8 @@
 # Dotfiles
 
+Note: You need to have [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) installed.
+
 ## Usage
-
-#### Install Oh-my-zsh:
-
-[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 #### Clone this repo:
 
@@ -12,23 +10,22 @@
 git clone https://github.com/jpavon/dotfiles.git ~/.dotfiles
 ```
 
-#### Make sync.sh executable:
+#### Make dotfiles executable:
 
 ```bash
-cd ~/.dotfiles && chmod +x sync.sh
+cd ~/.dotfiles && chmod +x bin/dotfiles
 ```
 
 #### Sync files:
 
 ```bash
-./sync.sh
+./bin/dotfiles
 ```
 
-Once is synced you can use this commands:
+Once is synced you can use this command to update the dotfiles from ~/.dotfiles to ~/:
 
 ```bash
-dot # sync dotfiles
-godot # go to ~/.dotfiles folder
+dotfiles
 ```
 
 ## `.extra` file

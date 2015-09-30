@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# Colored logging output
+e_success() {
+    printf "$(tput setaf 10)✓ %s$(tput sgr0)\n" "$@"
+}
+
+# Update dotfiles
+run_update() {
+
+cd ~/.dotfiles
+
+# Sync
+function doIt() {
+    rsync --exclude ".git/" --exclude ".DS_Store" --exclude "sync.sh" --exclude ".osx" --exclude "README.md" -av . ~
+}
+doIt
+unset doIt
+
+# Success logging
+e_success 'Sync done.'
+
+# Reload shell
+exec $SHELL -l
+
+}
+
+# Run
+run_update
+exit
+
