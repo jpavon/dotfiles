@@ -40,3 +40,6 @@ alias reload="exec $SHELL -l"
 
 # Git open
 alias go="git open"
+
+# Dotfiles
+alias dot="dotfiles"
