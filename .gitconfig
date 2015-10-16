@@ -32,6 +32,10 @@
 	branches = branch -a
 	remotes = remote -v
 
+	# Delete remote/local branch
+	drb = push origin --delete
+	dlb = branch -D
+
 	# Clone a repository including all submodules
 	c = clone --recursive
 
@@ -55,10 +59,8 @@
 	m = merge --no-ff
 
 	# Push to origin
+	po = push origin
 	pom = push origin master
-
-	# Push to beanstalk
-	pbm = push beanstalk master
 
 	# Remove changes from a file
 	rfile = checkout HEAD --
