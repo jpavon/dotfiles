@@ -36,7 +36,8 @@
 	unstage = reset HEAD --
 
 	# Switch to a branch, creating it if necessary
-	go = checkout -B
+	go = checkout
+	gob = checkout -B
 
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
